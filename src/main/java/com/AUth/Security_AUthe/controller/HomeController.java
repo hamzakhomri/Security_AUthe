@@ -11,7 +11,7 @@ public class HomeController {
         return "Hellow, Home!";
     }
 
-    @GetMapping("/securder")
+    @GetMapping("/secured")
     public String scured(){
         return "Hellow, Secured!!";
     }

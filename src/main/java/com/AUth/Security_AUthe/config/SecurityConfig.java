@@ -13,15 +13,15 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebSecurity
 public class SecurityConfig {
     @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeRequests(auth ->
-                        auth.requestMatchers("/").permitAll()
-                                .anyRequest().authenticated()
+                        auth.requestMatchers("/").permitAll() // Permit all requests to "/"
+                                .anyRequest().authenticated()     // Require authentication for any other requests
                 )
-                .oauth2Login(withDefaults())
-                .formLogin(withDefaults())
-                .build();
+                .oauth2Login(withDefaults())            // Configure OAuth2 login with default settings
+                .formLogin(withDefaults())              // Configure form-based login with default settings
+                .build();                               // Build the SecurityFilterChain
     }
 
 }

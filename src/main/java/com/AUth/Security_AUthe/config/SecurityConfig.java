@@ -8,7 +8,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.web.SecurityFilterChain;
 
 import static org.springframework.security.config.Customizer.withDefaults;
-
+//https://www.youtube.com/watch?v=us0VjFiHogo&ab_channel=DanVega
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
